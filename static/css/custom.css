@@ -22,3 +22,31 @@
 .site-header-content {
     padding: 6vw 4vw;
 }
+
+/* RECON theme for highlightjs */
+@font-face {
+    font-family: "Sawasdee"; 
+    src: url("fonts/Sawasdee.ttf"),
+    src: url("fonts/Sawasdee.eot"),
+    src: url("fonts/Sawasdee.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Sawasdee.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Sawasdee";
+    src: url("fonts/Sawasdee-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Sawasdee";
+    src: url("fonts/Sawasdee-Oblique.ttf");
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: "Sawasdee";
+    src: url("fonts/Sawasdee-BoldOblique.ttf");
+    font-weight: bold;
+    font-style: oblique;
+}
