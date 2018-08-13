@@ -49,7 +49,7 @@ create_post <- function(title = "A study of Zika and Cholera",
   file.copy(system.file("rmarkdown", "templates",
                         "resources",
                         "placeholder.jpg", package = "learn"),
-            file.path("img", "highres", paste0(slug, ".jog")),
+            file.path("static","img", "highres", paste0(slug, ".jog")),
             overwrite = TRUE)
   
   yaml <- rmarkdown::yaml_front_matter(post_path, encoding = "UTF-8")
