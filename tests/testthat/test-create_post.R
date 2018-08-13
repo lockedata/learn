@@ -31,5 +31,5 @@ test_that("create_post works", {
   expect_equal(yaml$categories, "practicals")
   file.remove(path)
   
-  unlink(file.path("post", "content"), recursive = TRUE)
+  unlink("content", recursive = TRUE)
 })
