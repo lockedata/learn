@@ -34,9 +34,9 @@ render_new_rmds_to_md <- function(dir = "content/post") {
   
   # build only the ones to be built
   if(length(to_build) > 0){
-    browser()
+
     for (b in to_build) {
-      rmd = file.path(content, paste0(b, ".Rmd"))
+      rmd <- b
       rmarkdown::render(rmd,
                         rmarkdown::md_document(variant = "markdown_github",
                                                preserve_yaml = TRUE))
