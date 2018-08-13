@@ -14,5 +14,5 @@ Used for pure side effect
 }
 \description{
 Using the automagic package, detect requirements in Rmd files
-and install them all. Will help you if packages appear to be on Github.
+and install them all. Will help you if packages appear to be on GitHub.
 }
