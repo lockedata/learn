@@ -26,8 +26,8 @@ render_new_rmds_to_md <- function(dir = "content/post") {
   # Rmd with a too old md
   dplyr::left_join(rmds, mds, by = "slug",
                    suffix = c("_rmd", "_md")) %>%
-    dplyr::filter(change_time_md < change_time_rmd) %>%
-    dplyr::pull(path_rmd) -> too_old
+    dplyr::filter(.data$change_time_md < .data$change_time_rmd) %>%
+    dplyr::pull(.data$path_rmd) -> too_old
     
   
   to_build <- c(too_old, unbuilt)
