@@ -19,6 +19,6 @@ test_that("render_new_rmds_to_md works", {
   
   file.remove(rmd_path)
   file.remove(md_path)
-  unlink(file.path("post", "content"), recursive = TRUE)
+  unlink("content", recursive = TRUE)
   
 })
