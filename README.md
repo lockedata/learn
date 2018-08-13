@@ -22,7 +22,7 @@ If your GitHub user name is `johnsnow`.
 
 1.  Open the project in Rstudio and run `devtools::install()`
 
-2.  **Add new content**, typically in the form of a new `.Rmd` file and associated media (most often images). 
+2.  **Add new content**, typically in the form of a new `.Rmd` file and associated media (most often images). See more details [in the following section](#creation)
 
     Regular posts such as practicals, tutorials, and case studies are stored in `content/post/`. They can be created via the use of `learnr::create_post`, e.g.
     
@@ -41,8 +41,8 @@ If your GitHub user name is `johnsnow`.
 
 5.  Make a **pull request** against the main project (`master` branch), from the GitHub *RECON learn* project. Make sure you use `reconhub/learn`, branch `master` as base fork.
 
-Contributing content
---------------------
+Creating content <a name="creation"></a>
+----------------
 
 Practicals, tutorials, case studies are contributed as [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents and generated markdown ready for conversion as `.md` documents. They are stored in `content/post`. The best way to create a new document is copy-paste an existing one and rename it.
 

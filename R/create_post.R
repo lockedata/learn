@@ -29,7 +29,7 @@ create_post <- function(title = "A study of Zika and Cholera",
   singular_category <- switch(category[[1]],
                               "practicals" = "practical",
                               "tutorials" = "tutorial",
-                              "case studies" = "case study")
+                              "case studies" = "study")
   
   post_path <- file.path("content", "post", 
                          glue::glue("{singular_category}-{slug}.Rmd"))
