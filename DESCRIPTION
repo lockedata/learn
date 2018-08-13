@@ -27,7 +27,8 @@ Imports:
     jsonlite,
     fs,
     magrittr,
-    dplyr
+    dplyr,
+    rlang
 RoxygenNote: 6.1.0
 License: MIT + file LICENSE
 Suggests: 
