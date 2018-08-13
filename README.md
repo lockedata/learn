@@ -41,24 +41,34 @@ If your GitHub user name is `johnsnow`.
 
 5.  Make a **pull request** against the main project (`master` branch), from the GitHub *RECON learn* project. Make sure you use `reconhub/learn`, branch `master` as base fork.
 
-Creating content <a name="creation"></a>
-----------------
+Creating posts <a name="creation"></a>
+--------------
 
-Practicals, tutorials, case studies are contributed as [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents and generated markdown ready for conversion as `.md` documents. They are stored in `content/post`. The best way to create a new document is copy-paste an existing one and rename it.
+Practicals, tutorials, case studies are contributed as [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents and generated markdown ready for conversion as `.md` documents. They are stored in `content/post`. The best way to create a new document is to use the `create_post` function.
+
+ ```r
+create_post(title = "An overview of incidence plotting",
+            slug = "incidence-plotting",
+            author = "Steph Locke",
+            category = "practicals")
+```
+
+See `?create_post` to see further parameters.
 
 ### Conventions
 
-Naming conventions are as follows:
+File-naming conventions are as follows:
 
--   start with `practical` for practicals, `study` for case studies
--   use lower case, no special characters
--   be hypen-separated ("-")
+-   start with `practical` for practicals, `study` for case studies (handled by `create_post`)
+-   use an informative slug.
+    -   use lower case, no special characters
+    -   be hypen-separated ("-")
 
 For instance, for a practical using a SEIR model for influenza data:
 
--   `practical-seir-influenza` is good
--   `SEIR-flu` is bad as lacking 'practical' (it could be a lecture), and has capitalised letters
--   `practical-new` is bad, as it is non-informative
+-   `seir-influenza` is a good slug 
+-   `SEIR-flu` is bad because it has capitalised letters
+-   `new` is bad, as it is non-informative
 
 ### Editing the YAML header
 
