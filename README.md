@@ -3,7 +3,7 @@ Welcome to the *RECON learn* project
 
 This github project hosts the sources of the [RECON](http://www.repidemicsconsortium.org/) learn platform, live at: <https://reconlearn.netlify.com/>.
 
-This *RECON learn* website uses [Rmarkdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents to build markdown (`.md`) content that [Hugo](https://gohugo.io) then turns into a nifty website (`.html`).
+This *RECON learn* website uses [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents to build markdown (`.md`) content that [Hugo](https://gohugo.io) then turns into a nifty website (`.html`).
 
 General workflow
 ----------------
@@ -33,7 +33,7 @@ If your github user name is `johnsnow`.
 Contributing content
 --------------------
 
-Practicals, tuorials, case studies are contributed as [Rmarkdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents and generated markdown ready for conversion as `.md` documents. They are stored in `content/post`. The best way to create a new document is copy-paste an existing one and rename it.
+Practicals, tutorials, case studies are contributed as [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents and generated markdown ready for conversion as `.md` documents. They are stored in `content/post`. The best way to create a new document is copy-paste an existing one and rename it.
 
 ### Conventions
 
