@@ -31,6 +31,7 @@ Imports:
 RoxygenNote: 6.1.0
 License: MIT + file LICENSE
 Suggests: 
-    testthat
+    testthat,
+    covr
 Remotes:
     r-lib/usethis
