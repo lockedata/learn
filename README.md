@@ -5,8 +5,8 @@ This GitHub project hosts the sources of the [RECON](http://www.repidemicsconsor
 
 This *RECON learn* website uses [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents to build markdown (`.md`) content that [Hugo](https://gohugo.io) then turns into a nifty website (`.html`).
 
-General workflow
-----------------
+General workflow for contributing
+---------------------------------
 
 The general workflow would include the following steps:
 
@@ -121,7 +121,7 @@ title : About RECON learn
 
 ### Maintaining package dependencies
 
-This repository has a DESCRIPTION which lists any packages required to manage the codebase.
+This repository has a DESCRIPTION which lists any packages required to manage this package itself, not the packages required to knit the R Markdown files.
 
 To identify and install all the packages needed to build all of the `.Rmd` files in `content/post/`, you need to run `learn::get_and_update_dependencies()`. This will also help find packages on GitHub.
 
