@@ -1,2 +1,10 @@
+^README\.Rmd$
+^_redirects$
+^config\.toml$
+^content$
+^index\.Rmd$
+^layouts$
+^netlify\.toml$
+^static$
 ^.*\.Rproj$
 ^\.Rproj\.user$
