@@ -14,7 +14,7 @@ save_and_use_widget <- function(x, filename) {
   dir.create("widgets", showWarnings = FALSE)
   origwd <- getwd()
   setwd("widgets")
-  f = paste0(name, ".html")
+  f <- paste0(filename, ".html")
   htmlwidget::saveWidget(x, f, selfcontained = TRUE)
   setwd(origwd)
   htmltools::tags$iframe(src = file.path("widgets", f),
