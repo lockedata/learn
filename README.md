@@ -1,7 +1,7 @@
 Welcome to the *RECON learn* project
 ====================================
 
-This github project hosts the sources of the [RECON](http://www.repidemicsconsortium.org/) learn platform, live at: <https://reconlearn.netlify.com/>.
+This GitHub project hosts the sources of the [RECON](http://www.repidemicsconsortium.org/) learn platform, live at: <https://reconlearn.netlify.com/>.
 
 This *RECON learn* website uses [R Markdown](http://rmarkdown.rstudio.com/) (`.Rmd`) documents to build markdown (`.md`) content that [Hugo](https://gohugo.io) then turns into a nifty website (`.html`).
 
@@ -10,15 +10,15 @@ General workflow
 
 The general workflow would include the following steps:
 
-1.  **Fork the project** from the github *RECON learn* project:
+1.  **Fork the project** from the GitHub *RECON learn* project:
 
-This will create a copy of the project in your own github account. You will need to clone this archive, and make the modifications there. You `git clone` would look like:
+This will create a copy of the project in your own GitHub account. You will need to clone this archive, and make the modifications there. You `git clone` would look like:
 
 ``` bash
 git clone https://github.com/johnsnow/learn
 ```
 
-If your github user name is `johnsnow`.
+If your GitHub user name is `johnsnow`.
 
 1.  Open the project in Rstudio and run `devtools::install()`
 
@@ -28,7 +28,7 @@ If your github user name is `johnsnow`.
 
 4.  `git commit` and `git push` all changes; don't forget to add new images as well (run `git status` to see which files haven't been added).
 
-5.  Make a **pull request** against the main project (`master` branch), from the github *RECON learn* project. Make sure you use `reconhub/learn`, branch `master` as base fork.
+5.  Make a **pull request** against the main project (`master` branch), from the GitHub *RECON learn* project. Make sure you use `reconhub/learn`, branch `master` as base fork.
 
 Contributing content
 --------------------
