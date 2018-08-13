@@ -40,6 +40,18 @@ create_post <- function(title = "A study of Zika and Cholera",
             post_path,
             overwrite = TRUE)
   
+  file.copy(system.file("rmarkdown", "templates",
+                        "resources",
+                        "practical-phylogenetics.bib", package = "learn"),
+            file.path("content", "post", paste0(slug, ".bib")),
+            overwrite = TRUE)
+  
+  file.copy(system.file("rmarkdown", "templates",
+                        "resources",
+                        "placeholder.jpg", package = "learn"),
+            file.path("img", "highres", paste0(slug, ".jog")),
+            overwrite = TRUE)
+  
   yaml <- rmarkdown::yaml_front_matter(post_path, encoding = "UTF-8")
   
   yaml$title <- title
@@ -48,6 +60,8 @@ create_post <- function(title = "A study of Zika and Cholera",
   yaml$topics <- jsonlite::toJSON(yaml$topics)
   yaml$categories <- jsonlite::toJSON(category)
   yaml$date <- as.character(date)
+  yaml$bibliography <- paste0(slug, ".bib")
+  yaml$image <- glue::glue("img/highres/{slug}.jpg")
   yaml$licenses <- licence_name
   
   file_content <- readLines(post_path)

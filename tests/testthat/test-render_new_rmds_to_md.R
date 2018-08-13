@@ -1,6 +1,8 @@
 context("render_new_rmds_to_md")
 
 test_that("render_new_rmds_to_md works", {
+  dir.create("content")
+  dir.create(file.path("content", "post"))
   create_post()
   render_new_rmds_to_md()
   
@@ -17,5 +19,6 @@ test_that("render_new_rmds_to_md works", {
   
   file.remove(rmd_path)
   file.remove(md_path)
+  unlink(file.path("post", "content"), recursive = TRUE)
   
 })

@@ -1,7 +1,8 @@
 context("test-create_post")
 
 test_that("create_post works", {
-  dir.create(file.path("post", "content"))
+  dir.create("content")
+  dir.create(file.path("content", "post"))
   
   create_post()
   
@@ -30,5 +31,5 @@ test_that("create_post works", {
   expect_equal(yaml$categories, "practicals")
   file.remove(path)
   
-  unlink(file.path("post", "content"))
+  unlink(file.path("post", "content"), recursive = TRUE)
 })
