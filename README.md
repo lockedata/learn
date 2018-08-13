@@ -22,7 +22,18 @@ If your GitHub user name is `johnsnow`.
 
 1.  Open the project in Rstudio and run `devtools::install()`
 
-2.  **Add new content**, typically in the form of a new `.Rmd` file and associated media (most often images). Regular posts such as practicals, tutorials, and case studies are stored in `content/post/`. Other content which is not rendered as typical html reports such as lecture slides can be stored in `static`.
+2.  **Add new content**, typically in the form of a new `.Rmd` file and associated media (most often images). 
+
+    Regular posts such as practicals, tutorials, and case studies are stored in `content/post/`. They can be created via the use of `learnr::create_post`, e.g.
+    
+    ```r
+    create_post(title = "An overview of incidence plotting",
+              slug = "incidence-plotting",
+              author = "Steph Locke",
+              category = "practicals")
+    ```
+
+    Other content which is not rendered as typical html reports such as lecture slides can be stored in `static`.
 
 3.  **Generate content** by running `learn::render_new_rmds_to_md()` to build the `.md` files and associated graphics.
 
@@ -129,7 +140,6 @@ To identify and install all the packages needed to build all of the `.Rmd` files
 
 If you need to change an existing piece of content:
 
-1.  Delete its corresponding `.md` file
-2.  Make the changes to the `.Rmd` file
-3.  Run `learn::render_new_rmds_to_md()`
-4.  Commit and push to the repository
+1.  Make the changes to the `.Rmd` file
+2.  Run `learn::render_new_rmds_to_md()`
+3.  Commit and push to the repository
