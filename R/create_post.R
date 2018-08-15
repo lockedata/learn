@@ -13,7 +13,6 @@
 #' @return Used only for side-effects.
 #' @export
 #'
-#' @examples
 create_post <- function(title = "A study of Zika and Cholera",
                         slug = NULL,
                         category = c("tutorials", "practicals", "case studies"),
