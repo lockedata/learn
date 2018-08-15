@@ -4,10 +4,12 @@
 \alias{render_new_rmds_to_md}
 \title{Prep Hugo pages by converting Rmds to Md's}
 \usage{
-render_new_rmds_to_md(dir = "content/post")
+render_new_rmds_to_md(dir = "content/post", build = "old and new")
 }
 \arguments{
 \item{dir}{Directory to search for new Rmds in. Defaults to the blog post location of Hugo.}
+
+\item{build}{Selection criteria for which Rmds to convert to md, options are c("all", "old and new", "old", "new")}
 }
 \value{
 Used for pure side effect
