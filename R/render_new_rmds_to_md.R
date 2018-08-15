@@ -6,10 +6,13 @@
 #' preview option in Rstudio to quickly see how your md has worked.
 #'
 #' @param dir Directory to search for new Rmds in. Defaults to the blog post location of Hugo.
+#' @param build Selection criteria for which Rmds to convert to md, options are c("all", "old and new", "old", "new")
 #'
 #' @return Used for pure side effect
 #' @export
-render_new_rmds_to_md <- function(dir = "content/post") {
+render_new_rmds_to_md <- function(dir = "content/post", 
+                                  build = "old and new") {
+  match.arg(build, c("all", "old and new", "old", "new"))
   content = dir
   
   # get info about all files
@@ -29,8 +32,18 @@ render_new_rmds_to_md <- function(dir = "content/post") {
     dplyr::filter(.data$change_time_md < .data$change_time_rmd) %>%
     dplyr::pull(.data$path_rmd) -> too_old
     
-  
-  to_build <- c(too_old, unbuilt)
+  if(build == "all"){
+    to_build <- rmds$path_rmd 
+  }
+  if(build == "old and new"){
+    to_build <- c(too_old, unbuilt)
+  }
+  if(build == "old"){
+    to_build <- too_old
+  }
+  if(build == "new"){
+    to_build <- unbuilt
+  }
   
   # build only the ones to be built
   if(length(to_build) > 0){
@@ -38,8 +51,8 @@ render_new_rmds_to_md <- function(dir = "content/post") {
     for (b in to_build) {
       rmd <- b
       rmarkdown::render(rmd,
-                        rmarkdown::md_document(variant = "gfm",
-                                               preserve_yaml = TRUE))
+                        rmarkdown::md_document(variant = "markdown_github",
+                                               preserve_yaml = TRUE ))
     }
   }else{
     message("Nothing to build, all .md up-to-date")
